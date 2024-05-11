@@ -15,6 +15,7 @@
 ```bash
 yay -S minikube kubectl kubectx k9s argocd github-cli
 ```
+> [!Info]
 > This is guide is written for arch linux (btw). Adjust the dependency installation according to your distro.
 
 ## Start minikube
