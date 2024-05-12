@@ -96,8 +96,8 @@ We'll use an argocd application to deploy all the other appsets.
         automated:
           prune: true
     ```
-    > [!IMPORTANT]  
-    > Make sure to adjust the `spec.source.repoURL` accordingly.
+> [!IMPORTANT]  
+> Make sure to adjust the `spec.source.repoURL` accordingly.
 
 3. Push the changes:
     ```bash
@@ -181,8 +181,8 @@ We'll use an argocd application to deploy all the other appsets.
        syncOptions:
          - CreateNamespace=true
    ```
-    > [!IMPORTANT]  
-    > Make sure to adjust the `spec.source.repoURL` accordingly.
+> [!IMPORTANT]  
+> Make sure to adjust the `spec.source.repoURL` accordingly.
 
 5. Create secrets directory:
    ```bash
