@@ -6,10 +6,11 @@ I'll use the following technologies:
 
 - minikube -> to spin up a kubernetes cluster
 - argocd -> to deploy miningcore using helm charts
+- sealed-secrets -> to encrypt k8s secrets
 - kube-prometheus-stack -> to monitor miningcores performance and detect anomalies
 
 > [!Important]
-> No part of this guide is written with security in mind. So please be more careful with secrets like password and seedphrases in production!
+> This guide was not necessarily written with security in mind. So please be more careful with secrets like password and seedphrases in production!
 
 ---
 
