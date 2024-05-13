@@ -163,7 +163,7 @@ We'll use an argocd application to deploy all the other appsets.
    apiVersion: argoproj.io/v1alpha1
    kind: Application
    metadata:
-   name: secretes
+   name: secrets
      namespace: argocd
    spec:
      project: default
