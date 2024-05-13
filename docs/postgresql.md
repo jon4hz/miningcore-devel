@@ -116,9 +116,9 @@ First of all we create an argocd app which will handle the deployment of the hel
                worker TEXT NULL,
                useragent TEXT NULL,
                ipaddress TEXT NOT NULL,
-                 source TEXT NULL,
+               source TEXT NULL,
                created TIMESTAMPTZ NOT NULL
-             );
+             ) PARTITION BY LIST (poolid);
 
              CREATE INDEX IDX_SHARES_POOL_MINER on shares(poolid, miner);
              CREATE INDEX IDX_SHARES_POOL_CREATED ON shares(poolid, created);
@@ -131,14 +131,14 @@ First of all we create an argocd app which will handle the deployment of the hel
                blockheight BIGINT NOT NULL,
                networkdifficulty DOUBLE PRECISION NOT NULL,
                status TEXT NOT NULL,
-                 type TEXT NULL,
-                 confirmationprogress FLOAT NOT NULL DEFAULT 0,
+               type TEXT NULL,
+               confirmationprogress FLOAT NOT NULL DEFAULT 0,
                effort FLOAT NULL,
                transactionconfirmationdata TEXT NOT NULL,
                miner TEXT NULL,
                reward decimal(28,12) NULL,
-                 source TEXT NULL,
-                 hash TEXT NULL,
+               source TEXT NULL,
+               hash TEXT NULL,
                created TIMESTAMPTZ NOT NULL,
 
                  CONSTRAINT BLOCKS_POOL_HEIGHT UNIQUE (poolid, blockheight, type) DEFERRABLE INITIALLY DEFERRED
@@ -164,7 +164,7 @@ First of all we create an argocd app which will handle the deployment of the hel
                address TEXT NOT NULL,
                amount decimal(28,12) NOT NULL DEFAULT 0,
                usage TEXT NULL,
-                 tags text[] NULL,
+               tags text[] NULL,
                created TIMESTAMPTZ NOT NULL
              );
 
@@ -205,8 +205,8 @@ First of all we create an argocd app which will handle the deployment of the hel
                networkhashrate DOUBLE PRECISION NOT NULL DEFAULT 0,
                networkdifficulty DOUBLE PRECISION NOT NULL DEFAULT 0,
                lastnetworkblocktime TIMESTAMPTZ NULL,
-                 blockheight BIGINT NOT NULL DEFAULT 0,
-                 connectedpeers INT NOT NULL DEFAULT 0,
+               blockheight BIGINT NOT NULL DEFAULT 0,
+               connectedpeers INT NOT NULL DEFAULT 0,
                created TIMESTAMPTZ NOT NULL
              );
 
