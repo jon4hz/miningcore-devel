@@ -77,7 +77,7 @@ First of all we create an argocd app which will handle the deployment of the hel
        repository: https://charts.bitnami.com/bitnami
    ```
 
-3. Create `src/postgresql/values.yml`:
+3. Create `src/postgresql/values.yml`:  
    The `values.yml` contains your postgresql configuration and an sql script to initialize the miningcore database.
    <details>
    <summary><code>src/postgresql/values.yml</code></summary>

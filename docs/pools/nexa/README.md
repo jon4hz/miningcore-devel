@@ -1,5 +1,13 @@
 # Nexa
 
+- [Nexa](#nexa)
+  - [Build docker image](#build-docker-image)
+  - [Deploy nexad](#deploy-nexad)
+  - [Create the pool wallet](#create-the-pool-wallet)
+  - [Create database partition](#create-database-partition)
+  - [Deploy miningcore pool](#deploy-miningcore-pool)
+
+
 ## Build docker image
 Use this [`Dockerfile`](./Dockerfile)
 ```bash
